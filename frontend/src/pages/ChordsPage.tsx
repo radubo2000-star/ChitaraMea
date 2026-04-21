@@ -28,18 +28,18 @@ export default function ChordsPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Dicționar de Acorduri</h1>
-      <p className="text-gray-500 mb-6">Toate acordurile pentru chitară cu diagrame și poziții</p>
+      <h1 className="text-3xl font-bold text-wood-800 mb-2">Dicționar de Acorduri</h1>
+      <p className="text-wood-500 mb-6">Toate acordurile pentru chitară cu diagrame și poziții</p>
 
       {/* Filters */}
-      <div className="bg-white rounded-xl border border-gray-200 p-4 mb-8">
+      <div className="wood-card p-4 mb-8">
         <div className="mb-4">
-          <p className="text-sm font-medium text-gray-600 mb-2">Notă de bază:</p>
+          <p className="text-sm font-medium text-wood-600 mb-2">Notă de bază:</p>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setActiveRoot('')}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                !activeRoot ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                !activeRoot ? 'bg-wood-600 text-white' : 'bg-wood-100 text-wood-600 hover:bg-wood-200'
               }`}
             >
               Toate
@@ -49,7 +49,7 @@ export default function ChordsPage() {
                 key={note}
                 onClick={() => setActiveRoot(activeRoot === note ? '' : note)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                  activeRoot === note ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  activeRoot === note ? 'bg-wood-600 text-white' : 'bg-wood-100 text-wood-600 hover:bg-wood-200'
                 }`}
               >
                 {note}
@@ -58,12 +58,12 @@ export default function ChordsPage() {
           </div>
         </div>
         <div>
-          <p className="text-sm font-medium text-gray-600 mb-2">Tip acord:</p>
+          <p className="text-sm font-medium text-wood-600 mb-2">Tip acord:</p>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setActiveType('')}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                !activeType ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                !activeType ? 'bg-wood-600 text-white' : 'bg-wood-100 text-wood-600 hover:bg-wood-200'
               }`}
             >
               Toate
@@ -73,7 +73,7 @@ export default function ChordsPage() {
                 key={type}
                 onClick={() => setActiveType(activeType === type ? '' : type)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                  activeType === type ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  activeType === type ? 'bg-wood-600 text-white' : 'bg-wood-100 text-wood-600 hover:bg-wood-200'
                 }`}
               >
                 {type}
@@ -88,13 +88,13 @@ export default function ChordsPage() {
         {filteredChords.map((chord) => (
           <div
             key={chord.id}
-            className={`bg-white rounded-xl border p-4 text-center cursor-pointer hover:shadow-md transition-all ${
-              highlight === chord.name ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200'
+            className={`wood-card p-4 text-center cursor-pointer hover:shadow-md transition-all ${
+              highlight === chord.name ? 'border-wood-500 ring-2 ring-wood-300' : ''
             }`}
             onClick={() => setSelectedChord(chord)}
           >
             <ChordTag name={chord.name} type={chord.type} />
-            <p className="text-xs text-gray-400 mt-1">{chord.type}</p>
+            <p className="text-xs text-wood-400 mt-1">{chord.type}</p>
             <div className="mt-2 flex justify-center">
               <ChordDiagram chord={chord} size="sm" />
             </div>
@@ -104,7 +104,7 @@ export default function ChordsPage() {
 
       {filteredChords.length === 0 && (
         <div className="text-center py-16">
-          <p className="text-gray-400 text-lg">Nu am găsit acorduri cu aceste filtre</p>
+          <p className="text-wood-400 text-lg">Nu am găsit acorduri cu aceste filtre</p>
         </div>
       )}
 
@@ -115,15 +115,15 @@ export default function ChordsPage() {
           onClick={() => setSelectedChord(null)}
         >
           <div
-            className="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6 text-center"
+            className="wood-card rounded-2xl shadow-xl max-w-sm w-full p-6 text-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-1">{selectedChord.name}</h2>
-            <p className="text-sm text-gray-500 mb-4">{selectedChord.type}</p>
+            <h2 className="text-2xl font-bold text-wood-800 mb-1">{selectedChord.name}</h2>
+            <p className="text-sm text-wood-500 mb-4">{selectedChord.type}</p>
             <div className="flex justify-center mb-4">
               <ChordDiagram chord={selectedChord} size="lg" />
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-wood-600">
               <p>Notă de bază: <strong>{selectedChord.root_note}</strong></p>
               {selectedChord.positions.length > 0 && (
                 <p className="mt-1">
@@ -133,7 +133,7 @@ export default function ChordsPage() {
             </div>
             <button
               onClick={() => setSelectedChord(null)}
-              className="mt-4 px-6 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 text-sm font-medium"
+              className="mt-4 px-6 py-2 bg-wood-200 text-wood-700 rounded-lg hover:bg-wood-300 text-sm font-medium"
             >
               Închide
             </button>
@@ -146,10 +146,10 @@ export default function ChordsPage() {
 
 function ChordTag({ name, type }: { name: string; type: string }) {
   const getColor = () => {
-    if (type === 'minor' || type === 'minor 7th') return 'bg-green-100 text-green-700';
-    if (type.includes('7')) return 'bg-yellow-100 text-yellow-700';
-    if (type.includes('sus')) return 'bg-purple-100 text-purple-700';
-    return 'bg-blue-100 text-blue-700';
+    if (type === 'minor' || type === 'minor 7th') return 'bg-amber-200 text-amber-800';
+    if (type.includes('7')) return 'bg-orange-200 text-orange-800';
+    if (type.includes('sus')) return 'bg-stone-200 text-stone-800';
+    return 'bg-wood-200 text-wood-800';
   };
 
   return (

@@ -21,8 +21,8 @@ export default function PlaylistDetailPage() {
   if (!playlist) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <p className="text-gray-400 text-lg">Playlistul nu a fost găsit</p>
-        <Link to="/playlists" className="text-blue-600 hover:underline mt-4 inline-block">
+        <p className="text-wood-400 text-lg">Playlistul nu a fost găsit</p>
+        <Link to="/playlists" className="text-wood-600 hover:underline mt-4 inline-block">
           Înapoi la playlisturi
         </Link>
       </div>
@@ -31,37 +31,37 @@ export default function PlaylistDetailPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-        <Link to="/playlists" className="hover:text-blue-600 flex items-center gap-1">
+      <div className="flex items-center gap-2 text-sm text-wood-500 mb-6">
+        <Link to="/playlists" className="hover:text-wood-600 flex items-center gap-1">
           <ArrowLeft size={14} /> Playlisturi
         </Link>
         <span>/</span>
-        <span className="text-gray-900 font-medium">{playlist.name}</span>
+        <span className="text-wood-800 font-medium">{playlist.name}</span>
       </div>
 
       <div className="flex items-center gap-4 mb-8">
-        <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center">
-          <ListMusic size={28} className="text-purple-600" />
+        <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center">
+          <ListMusic size={28} className="text-amber-600" />
         </div>
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">{playlist.name}</h1>
+          <h1 className="text-3xl font-bold text-wood-800">{playlist.name}</h1>
           {playlist.description && (
-            <p className="text-gray-500 mt-1">{playlist.description}</p>
+            <p className="text-wood-500 mt-1">{playlist.description}</p>
           )}
-          <p className="text-sm text-gray-400 mt-1">{playlistSongs.length} cântece</p>
+          <p className="text-sm text-wood-400 mt-1">{playlistSongs.length} cântece</p>
         </div>
       </div>
 
       {playlistSongs.length === 0 ? (
         <div className="text-center py-16">
-          <ListMusic size={48} className="mx-auto mb-4 text-gray-200" />
-          <p className="text-gray-400 text-lg mb-2">Playlistul este gol</p>
-          <p className="text-gray-400 text-sm mb-4">
+          <ListMusic size={48} className="mx-auto mb-4 text-wood-200" />
+          <p className="text-wood-400 text-lg mb-2">Playlistul este gol</p>
+          <p className="text-wood-400 text-sm mb-4">
             Adaugă cântece din pagina unui cântec
           </p>
           <Link
             to="/songs"
-            className="inline-flex px-6 py-2.5 bg-blue-600 text-white rounded-xl text-sm font-medium hover:bg-blue-700"
+            className="inline-flex px-6 py-2.5 bg-wood-600 text-white rounded-xl text-sm font-medium hover:bg-wood-700"
           >
             Explorează cântece
           </Link>
@@ -70,7 +70,7 @@ export default function PlaylistDetailPage() {
         <div className="space-y-4">
           {playlistSongs.map((song, index) => (
             <div key={song.id} className="flex items-start gap-4">
-              <span className="text-lg font-bold text-gray-300 mt-4 w-8 text-right shrink-0">
+              <span className="text-lg font-bold text-wood-300 mt-4 w-8 text-right shrink-0">
                 {index + 1}
               </span>
               <div className="flex-1">
@@ -78,7 +78,7 @@ export default function PlaylistDetailPage() {
               </div>
               <button
                 onClick={() => removeSongFromPlaylist(playlist.id, song.id)}
-                className="mt-4 p-2 text-gray-300 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors shrink-0"
+                className="mt-4 p-2 text-wood-300 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors shrink-0"
                 title="Elimină din playlist"
               >
                 <Trash2 size={16} />

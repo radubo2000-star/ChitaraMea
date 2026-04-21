@@ -22,20 +22,20 @@ export default function SongContent({ content }: SongContentProps) {
   }, [content]);
 
   return (
-    <div className="song-content bg-gray-50 rounded-xl p-3 sm:p-6 border border-gray-200 overflow-x-auto">
+    <div className="song-content bg-wood-50 rounded-xl p-3 sm:p-6 border border-wood-300 overflow-x-auto">
       {formattedLines.map((line, i) => {
         if (line.type === 'empty') {
           return <div key={i} className="h-4" />;
         }
         if (line.type === 'chord') {
           return (
-            <div key={i} className="chord-line text-blue-600 font-bold select-all">
+            <div key={i} className="chord-line text-wood-600 font-bold select-all">
               {line.text}
             </div>
           );
         }
         return (
-          <div key={i} className="lyric-line text-gray-800">
+          <div key={i} className="lyric-line text-wood-900">
             {line.text}
           </div>
         );

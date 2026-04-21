@@ -31,25 +31,25 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-wood-600 to-wood-800 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
             Acorduri și Tabulaturi pentru Chitară
           </h1>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-wood-200 mb-8 max-w-2xl mx-auto">
             Descoperă cântece românești cu versuri, acorduri și diagrame pentru chitară.
             Caută, salvează și creează playlisturi cu cântecele tale preferate.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               to="/songs"
-              className="px-6 py-3 bg-white text-blue-700 rounded-xl font-semibold hover:bg-blue-50 transition-colors"
+              className="px-6 py-3 bg-wood-100 text-wood-800 rounded-xl font-semibold hover:bg-wood-200 transition-colors"
             >
               Explorează Cântecele
             </Link>
             <Link
               to="/chords"
-              className="px-6 py-3 bg-blue-700 text-white rounded-xl font-semibold hover:bg-blue-600 transition-colors border border-blue-500"
+              className="px-6 py-3 bg-wood-700 text-wood-100 rounded-xl font-semibold hover:bg-wood-600 transition-colors border border-wood-500"
             >
               Dicționar Acorduri
             </Link>
@@ -63,10 +63,10 @@ export default function HomePage() {
           {stats.map((stat) => {
             const Icon = stat.icon;
             const colorClasses: Record<string, string> = {
-              blue: 'bg-blue-50 text-blue-600 border-blue-100',
-              green: 'bg-green-50 text-green-600 border-green-100',
-              purple: 'bg-purple-50 text-purple-600 border-purple-100',
-              yellow: 'bg-yellow-50 text-yellow-600 border-yellow-100',
+              blue: 'bg-wood-100 text-wood-600 border-wood-300',
+              green: 'bg-amber-100 text-amber-600 border-amber-300',
+              purple: 'bg-orange-100 text-orange-600 border-orange-300',
+              yellow: 'bg-stone-100 text-stone-600 border-stone-300',
             };
             return (
               <Link
@@ -86,8 +86,8 @@ export default function HomePage() {
       {/* Categories */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-900">Categorii</h2>
-          <Link to="/categories" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-1">
+          <h2 className="text-2xl font-bold text-wood-800">Categorii</h2>
+          <Link to="/categories" className="text-wood-600 hover:text-wood-700 text-sm font-medium flex items-center gap-1">
             Vezi toate <ArrowRight size={14} />
           </Link>
         </div>
@@ -96,15 +96,15 @@ export default function HomePage() {
             <Link
               key={cat.id}
               to={`/categories/${cat.slug}`}
-              className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-shadow"
+              className="wood-card p-4 hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <FolderOpen size={20} className="text-purple-600" />
+                <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                  <FolderOpen size={20} className="text-orange-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">{cat.name}</h3>
-                  <p className="text-xs text-gray-500">{cat.song_count} cântece</p>
+                  <h3 className="font-semibold text-wood-800">{cat.name}</h3>
+                  <p className="text-xs text-wood-500">{cat.song_count} cântece</p>
                 </div>
               </div>
             </Link>
@@ -115,11 +115,11 @@ export default function HomePage() {
       {/* Popular Songs */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <TrendingUp size={24} className="text-blue-600" />
+          <h2 className="text-2xl font-bold text-wood-800 flex items-center gap-2">
+            <TrendingUp size={24} className="text-wood-600" />
             Cântece Populare
           </h2>
-          <Link to="/songs" className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center gap-1">
+          <Link to="/songs" className="text-wood-600 hover:text-wood-700 text-sm font-medium flex items-center gap-1">
             Vezi toate <ArrowRight size={14} />
           </Link>
         </div>
