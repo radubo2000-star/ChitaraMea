@@ -7969,8 +7969,7 @@ export const songsData: Song[] = [
       }
     ],
     "views": 0
-  }
-],
+  },
   {
     "id": 148,
     "title": "Alcool",
