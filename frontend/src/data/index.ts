@@ -6727,7 +6727,7 @@ export const songsData: Song[] = [
     "id": 120,
     "title": "Vremuri",
     "slug": "vremuri-120",
-    "content": "Tonalitate originala F#\r\n\r\n G     C           D             G\r\nHei, tramvai, cu etaj şi tras de cai\r\nHei, joben, ce umblai la mon jardin\r\nHei, bunic, cu monoclu erai şic\r\nHei, can-can, cu picioarele-n tavan.\r\n\r\n        \t\tEm\r\nToate-au fost la timpul lor\r\n      C         D\r\nCeva exagerat\r\nAnii au trecut în zbor\r\nşi lumea le-a uitat.\r\n\r\nHei, pletoşi, cu pantaloni strâmţi şi soioşi\r\nChitarişti, zgomotoşi şi fantezişti\r\nMini-jupe, foarte scurt şi strâns pe trup\r\nHei, to shake, îndrăcit ca un berbec.\r\n\r\nToate sunt la modă acum\r\nCeva exagerat\r\nTimpul trece ca un fum\r\nşi tot va fi uitat.\r\n\r\nPrima strofa inca o data",
+    "content": "Tonalitate originala G, C, D, Em\r\n\r\n C     F           G             C\r\nHei, tramvai, cu etaj şi tras de cai\r\nHei, joben, ce umblai la mon jardin\r\nHei, bunic, cu monoclu erai şic\r\nHei, can-can, cu picioarele-n tavan.\r\n\r\n        \t\tAm\r\nToate-au fost la timpul lor\r\n      F         G\r\nCeva exagerat\r\nAnii au trecut în zbor\r\nşi lumea le-a uitat.\r\n\r\nHei, pletoşi, cu pantaloni strâmţi şi soioşi\r\nChitarişti, zgomotoşi şi fantezişti\r\nMini-jupe, foarte scurt şi strâns pe trup\r\nHei, to shake, îndrăcit ca un berbec.\r\n\r\nToate sunt la modă acum\r\nCeva exagerat\r\nTimpul trece ca un fum\r\nşi tot va fi uitat.\r\n\r\nPrima strofa inca o data",
     "author": {
       "id": 55,
       "name": "Phoenix",
@@ -6743,11 +6743,10 @@ export const songsData: Song[] = [
       }
     ],
     "chords": [
-      "G",
       "C",
-      "D",
-      "Em",
-      "F#"
+      "F",
+      "G",
+      "Am"
     ],
     "strumming": [
       {
@@ -8207,30 +8206,6 @@ export const songsData: Song[] = [
     "author_id": 61,
     "categories": [{"id": 3, "name": "Folk", "slug": "folk", "description": ""}],
     "chords": ["G", "D", "C", "A"],
-    "strumming": [{"pattern": ["D", "-", "D", "U", "-", "U", "D", "U"], "timeSignature": "4/4", "name": "Bază"}],
-    "views": 0
-  },
-  {
-    "id": 168,
-    "title": "Vremuri",
-    "slug": "vremuri-168",
-    "content": "Intro: G D G\n\n G      C\nHei, tramvai,\n D                  G\nCu etaj si tras de cai,\n G     C\nHei, joben,\n D                 G\nCe umblai la Mon Jardin.\n G     C\nHei, bunic,\n D               G\nCu monoclu erai sic,\n G       C\nHei, can-can,\n D                G\nCu picioarele-n tavan ! \n \n C                       G\nToate-au fost la timpul lor\n C         D\nCeva exagerat,\n C                  G \nAnii au trecut în zbor\n C              D\nSi lumea le-a uitat.\n   D\nDa, da.\n   D\nNu, nu.\n\n G       C\nHei, pletosi,\n D                         G\nCu pantaloni strâmti si soioşi,\n G     C\nChitaristi,\n D                  G\nZgomotoşi si fantazisti,\n G     C\nMini-jupe,\n D                         G\nFoarte scurt si strâns pe trup,\n G         C\nHei, tu, break,\n D               G\nÎndrăcit ca un berbec !\n\n\n C                 G\nToate sunt la mod-acum\n C          D\nSi tot exagerat,\n C                  G\nTimpul trece ca un fum\n C             D\nSi tot va fi uitat,\n   D\nDa, da,\n   D\nNu, nu…",
-    "author": {"id": 61, "name": "Pasarea Colibri", "slug": "pasarea-colibri"},
-    "author_id": 61,
-    "categories": [{"id": 3, "name": "Folk", "slug": "folk", "description": ""}],
-    "chords": ["G", "C", "D"],
-    "strumming": [{"pattern": ["D", "-", "D", "U", "-", "U", "D", "U"], "timeSignature": "4/4", "name": "Bază"}],
-    "views": 0
-  },
-  {
-    "id": 169,
-    "title": "Zori de zi",
-    "slug": "zori-de-zi-169",
-    "content": "A            E      F#m\nE dimineata zori de zi\nD     A     E      A\nUite pleaca dracii mii,\nA            E      F#m\nE dimineata zori de zi\nD    A      E    A\nSe coboara ingerii\n\n\nA              D   A E   F#m   D A E A\nHei, hei, hei zei peste zei\nA              D  A   E  F#m   D A E A\nHei, hei , hei soare scantei\n\n\nE dimineata adevarat\nSufletul fara pacat,\nE dimineata in viata mea\nRazele scalda inima.\n\nHai, hai, hai Rai langa Rai,\nHai, hai , hai , hai sus pe cai.\n\nE            A\nCaii mei cei albi,\nE           A\nCai inaripati,\nE            A      D A E A\nLanga mine frati.\n\n\nCaii mei usori,\nLiberi zburatori,\nSe ridica-n zori.\n\n\n\nE dimineata zori de zi,\nOamenii vad oamenii\nRoua pe dealuri, peste flori,\nFericit deasupra zbori.\n\n\nHei, hei, hei zei peste zei,\nHei, hei , hei Soare scantei.\n\nHai, hai , hai , hai sus pe cai.",
-    "author": {"id": 62, "name": "Phoenix", "slug": "phoenix"},
-    "author_id": 62,
-    "categories": [{"id": 4, "name": "Rock", "slug": "rock", "description": ""}],
-    "chords": ["A", "E", "F#m", "D"],
     "strumming": [{"pattern": ["D", "-", "D", "U", "-", "U", "D", "U"], "timeSignature": "4/4", "name": "Bază"}],
     "views": 0
   }
