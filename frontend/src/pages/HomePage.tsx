@@ -12,7 +12,10 @@ export default function HomePage() {
     { label: 'Acorduri', value: chordsData.length, icon: Guitar, color: 'yellow', link: '/chords' },
   ];
 
-  const popularSongs = songsData.slice(0, 6);
+  const popularSongs = useMemo(() => 
+    [...songsData].sort((a, b) => a.title.localeCompare(b.title, 'ro')).slice(0, 6), 
+    []
+  );
 
   // Compute category song counts dynamically from songs data
   const topCategories = useMemo(() => {

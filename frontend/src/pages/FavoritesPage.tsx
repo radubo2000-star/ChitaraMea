@@ -9,7 +9,9 @@ export default function FavoritesPage() {
   const { favorites } = useFavorites();
 
   const favoriteSongs = useMemo(
-    () => songsData.filter((s) => favorites.includes(s.id)),
+    () => songsData
+      .filter((s) => favorites.includes(s.id))
+      .sort((a, b) => a.title.localeCompare(b.title, 'ro')),
     [favorites]
   );
 
