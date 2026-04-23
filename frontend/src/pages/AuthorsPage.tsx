@@ -1,24 +1,26 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Search } from 'lucide-react';
-import { authorsData } from '@/data';
+import { getAuthorsWithSongCount } from '@/data/songCount';
 
 export default function AuthorsPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
+  const authorsWithCount = useMemo(() => getAuthorsWithSongCount(), []);
+
   const filteredAuthors = useMemo(() => {
-    let authors = [...authorsData].sort((a, b) => a.name.localeCompare(b.name, 'ro'));
+    let authors = [...authorsWithCount].sort((a, b) => a.name.localeCompare(b.name, 'ro'));
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       authors = authors.filter((a) => a.name.toLowerCase().includes(q));
     }
     return authors;
-  }, [searchQuery]);
+  }, [searchQuery, authorsWithCount]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Artiști</h1>
-      <p className="text-gray-500 mb-6">{authorsData.length} artiști</p>
+      <p className="text-gray-500 mb-6">{authorsWithCount.length} artiști</p>
 
       {/* Search */}
       <div className="relative max-w-md mb-6">
