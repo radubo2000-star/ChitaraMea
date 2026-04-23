@@ -17,7 +17,7 @@ export default function SongsPage() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredSongs = useMemo(() => {
-    let songs = [...songsData];
+    let songs = [...songsData].sort((a, b) => a.title.localeCompare(b.title, 'ro'));
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
@@ -33,7 +33,7 @@ export default function SongsPage() {
       songs = songs.filter((s) => s.title.toUpperCase().startsWith(activeLetter));
     }
 
-    return songs.sort((a, b) => a.title.localeCompare(b.title, 'ro'));
+    return songs;
   }, [searchQuery, activeLetter]);
 
   const totalPages = Math.ceil(filteredSongs.length / ITEMS_PER_PAGE);

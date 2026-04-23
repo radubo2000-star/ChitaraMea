@@ -11,7 +11,9 @@ export default function AuthorDetailPage() {
 
   const authorSongs = useMemo(() => {
     if (!author) return [];
-    return songsData.filter((s) => s.author.id === author.id);
+    return songsData
+      .filter((s) => s.author.id === author.id)
+      .sort((a, b) => a.title.localeCompare(b.title, 'ro'));
   }, [author]);
 
   if (!author) {

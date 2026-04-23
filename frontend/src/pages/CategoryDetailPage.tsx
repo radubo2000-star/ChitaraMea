@@ -11,7 +11,9 @@ export default function CategoryDetailPage() {
 
   const categorySongs = useMemo(() => {
     if (!category) return [];
-    return songsData.filter((s) => s.categories.some((c) => c.id === category.id));
+    return songsData
+      .filter((s) => s.categories.some((c) => c.id === category.id))
+      .sort((a, b) => a.title.localeCompare(b.title, 'ro'));
   }, [category]);
 
   if (!category) {
