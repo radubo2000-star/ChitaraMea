@@ -1726,6 +1726,66 @@ export const chordsData: Chord[] = [
     "muted_strings": [],
     "barre": null,
     "start_fret": 1
+  },
+  {
+    "id": 48,
+    "name": "Dsus2",
+    "type": "sus2",
+    "root_note": "D",
+    "positions": [
+      {
+        "fret": 2,
+        "string": 4,
+        "finger": 1
+      },
+      {
+        "fret": 3,
+        "string": 5,
+        "finger": 3
+      }
+    ],
+    "open_strings": [
+      3,
+      6
+    ],
+    "muted_strings": [
+      1,
+      2
+    ],
+    "barre": null,
+    "start_fret": 1
+  },
+  {
+    "id": 49,
+    "name": "Dsus4",
+    "type": "sus4",
+    "root_note": "D",
+    "positions": [
+      {
+        "fret": 2,
+        "string": 4,
+        "finger": 1
+      },
+      {
+        "fret": 3,
+        "string": 5,
+        "finger": 3
+      },
+      {
+        "fret": 3,
+        "string": 6,
+        "finger": 4
+      }
+    ],
+    "open_strings": [
+      3
+    ],
+    "muted_strings": [
+      1,
+      2
+    ],
+    "barre": null,
+    "start_fret": 1
   }
 ];
 
@@ -7990,7 +8050,7 @@ export const songsData: Song[] = [
     "author_id": 61,
     "categories": [{"id": 4, "name": "Rock", "slug": "rock", "description": ""}],
     "chords": ["D", "Dsus4", "Dsus2", "G", "A"],
-    "strumming": [{"pattern": ["D", "-", "D", "U", "-", "U", "D", "U"], "timeSignature": "4/4", "name": "Bază"}],
+    "strumming": [{"pattern": ["D", "-", "D", "U", "-","", "U", "D", "U"], "timeSignature": "4/4", "name": "Bază"}],
     "views": 0
   },
   {
